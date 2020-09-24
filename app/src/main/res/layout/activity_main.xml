@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Temporal">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="@drawable/gradiente">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/tituloMenu"
+                     android:textSize="25sp"
+                     android:gravity="center"
+                     android:layout_marginTop="15dp"
+                     android:layout_marginBottom="5dp"
+                     android:textColor="#ffffff"
+                     android:textStyle="bold"/>
+
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_marginEnd="0dp"
+               android:layout_marginStart="0dp"
+               android:layout_marginTop="0dp">
+
+                <ViewFlipper
+                    android:id="@+id/vfCarrucel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:inAnimation="@android:anim/slide_in_left"
+                    android:outAnimation="@android:anim/slide_out_right">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:id="@+id/btnPlates"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/plato"
+                            android:background="@android:color/transparent"
+                            android:onClick="getAcctionListener"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="@string/tvTituloPlatos"
+                            android:textColor="#ffffff"
+                            android:fontFamily="cursive"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/btnRestaurants"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/restaurant"
+                            android:background="@android:color/transparent"
+                            android:onClick="getAcctionListener"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/tvTituloRestaurantes"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:fontFamily="cursive"/>
+
+                    </RelativeLayout>
+
+
+
+                </ViewFlipper>
+
+                <ImageButton
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/icon_next"
+                    android:scaleX="-1"
+                    android:onClick="getAcctionListener"/>
+
+
+                <ImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/icon_next"
+                    android:onClick="getAcctionListener"/>
+
+           </RelativeLayout>
+
+           
+           <Button
+               android:id="@+id/btnInfo"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:text="@string/btnInfo"
+               android:background="#03A9F4"
+               android:textColor="#FFFFFF"
+               android:layout_marginHorizontal="15dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginBottom="1dp"
+               android:onClick="getAcctionListener"/>
+
+           <Button
+               android:id="@+id/btnAcerca"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:text="@string/btnAcerca"
+               android:layout_marginHorizontal="15dp"
+               android:textColor="#FFFFFF"
+               android:background="#03A9F4"
+               android:layout_marginVertical="1dp"
+               android:onClick="getAcctionListener"/>
+
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
